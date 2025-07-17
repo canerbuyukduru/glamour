@@ -23,7 +23,7 @@ const Menu = () => {
   // Örnek veri (her bölüm için kartlar)
   const exampleCards = [
     {
-      title: "Original Croissant",
+      title: "Yumurtalı Tavuk Croissant",
       desc: "1 Croissant, 1 Çorba Ekmeği, Izgara Yeşil Zeytin, Avokado, Labne Peynir, Köz Biber...",
       price: "₺410.00",
       img: "/images/sample1.jpg",
