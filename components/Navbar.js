@@ -7,7 +7,7 @@ const Navbar = () => {
     <div
       className="w-full opacity-100 z-50 relative"
     >
-      <nav className="container mx-auto flex justify-between items-center mt-4 px-2">
+      <nav className="container mx-auto flex justify-between items-center p-2">
         <Link href="/">
           <Image
             src="/images/glamour.jpg"

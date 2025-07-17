@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="text-white py-10 mt-16 border-t border-gray-800">
+    <footer className="text-[#1d1d1f] py-10 mt-16 border-t border-gray-800">
       {/* Google Map */}
       <div className="w-full flex flex-col items-center mb-6">
         <div className="w-full h-48 md:h-64 lg:h-96 rounded-lg overflow-hidden shadow-lg">

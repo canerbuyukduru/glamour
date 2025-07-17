@@ -29,7 +29,7 @@ const HeroSection = () => {
               />
             </defs>
             <text
-              fill="#fff"
+              fill="#ffff"
               fontSize="14"
               fontFamily="Arial"
               letterSpacing="3"

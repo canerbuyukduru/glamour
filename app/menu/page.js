@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import "./menu-animations.css";
 import { useState } from "react";
 
 const sectionTitles = [
@@ -48,16 +49,16 @@ const Menu = () => {
   const [selectedCard, setSelectedCard] = useState(null);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf9f7]">
+    <div className="min-h-screen flex flex-col bg-[#f5f5f7]">
       {/* Header */}
-      <header className="w-full border-b border-[#ececec] bg-white">
-        <div className="max-w-7xl mx-auto flex items-center justify-between py-6 px-4">
+      <header className="w-full border-b border-[#000000] bg-[#f5f5f7]">
+        <div className="max-w-7xl mx-auto flex items-center justify-center py-6 px-4">
           <Image
-            src="/images/lecroissanti-logo.png"
-            alt="Le Croissanti Logo"
+            src="/images/glamour.jpg"
+            alt="Glamour Logo"
             width={180}
             height={60}
-            className="object-contain"
+            className="object-contain animate-fade-in"
             priority
           />
         </div>
@@ -65,7 +66,7 @@ const Menu = () => {
       {/* Main Content */}
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-8">
         <h1 className="text-3xl md:text-4xl font-bold text-[#18181b] mb-2 mt-4">
-          Le Croissanti
+          Glamour
         </h1>
         {/* Tıklanabilir butonlar */}
         <div className="flex flex-wrap gap-3 mb-8">
@@ -77,7 +78,7 @@ const Menu = () => {
                 if (el)
                   el.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
-              className="border border-[#b97a2a] text-[#b97a2a] px-6 py-2 rounded-lg font-semibold shadow-sm bg-white hover:bg-[#f5e7d6] transition"
+              className="border cursor-pointer border-[#0A6847] text-[#0A6847] px-6 py-2 rounded-lg font-semibold shadow-sm bg-white hover:bg-[#f5e7d6] transition"
             >
               {title}
             </button>
@@ -86,18 +87,18 @@ const Menu = () => {
         {/* Bölümler */}
         {sectionTitles.map((title, idx) => (
           <section key={title} id={sectionIds[idx]} className="mb-10">
-            <div className="border-2 border-[#b97a2a] rounded-xl p-4 mb-4 bg-white">
-              <h2 className="text-xl md:text-2xl font-bold text-[#b97a2a] mb-2 flex items-center gap-2">
+            <div className="border-2 border-[#0A6847] rounded-xl p-4 mb-4 bg-[#f5f5f7]">
+              <h2 className="text-xl md:text-2xl font-bold text-[#0A6847] mb-2 flex items-center gap-2">
                 {title}
               </h2>
-              <div className="text-right text-sm text-gray-500 mb-2">
+              <div className="text-right text-sm text-white mb-2">
                 *20-25 dk. hazırlanma süresi vardır.
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {exampleCards.map((card, i) => (
                   <button
                     key={i}
-                    className="flex flex-row items-center bg-[#faf9f7] rounded-lg shadow p-4 gap-4 w-full text-left hover:bg-[#f5e7d6] transition"
+                    className="flex flex-row cursor-pointer items-center bg-[#faf9f7] rounded-lg shadow p-4 gap-4 w-full text-left hover:bg-[#56af7b] transition"
                     onClick={() => {
                       setSelectedCard(card);
                       setModalOpen(true);
@@ -110,17 +111,6 @@ const Menu = () => {
                       </div>
                       <div className="text-[#b97a2a] font-bold mb-2">
                         {card.price}
-                      </div>
-                      <div className="flex gap-2">
-                        {card.icons.map((icon, j) => (
-                          <Image
-                            key={j}
-                            src={icon}
-                            alt="icon"
-                            width={22}
-                            height={22}
-                          />
-                        ))}
                       </div>
                     </div>
                     <div className="flex-shrink-0">
@@ -164,7 +154,7 @@ const Menu = () => {
                 </svg>
               </button>
               {/* Image */}
-              <div className="w-full md:w-1/2 h-64 md:h-auto flex items-center justify-center bg-white">
+              <div className="w-full md:w-1/2 h-64 md:h-auto flex items-center bg-white">
                 <Image
                   src={selectedCard.img}
                   alt={selectedCard.title}
@@ -207,11 +197,6 @@ const Menu = () => {
                   </div>
                   <div className="text-[#b97a2a] font-bold text-lg mb-2">
                     {selectedCard.price}
-                  </div>
-                  <div className="flex gap-2 mb-4">
-                    {selectedCard.icons.map((icon, j) => (
-                      <Image key={j} src={icon} alt="icon" width={28} height={28} />
-                    ))}
                   </div>
                 </div>
                 <div className="flex items-center gap-2 mt-4">
