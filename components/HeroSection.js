@@ -5,14 +5,14 @@ const HeroSection = () => {
   return (
     <div className="relative w-full h-screen min-h-[500px] mb-12">
       <Navbar />
-      <video
+      {/* <video
         className="absolute top-0 left-0 w-full h-full object-cover -z-10"
         src="/videos/hero-video.mp4"
         autoPlay
         loop
         muted
         playsInline
-      />
+      /> */}
       <div className="bg-black/40 absolute top-0 left-0 w-full h-full z-0"></div>
 
       {/* Daire şeklinde dönen animasyonlu yazı */}

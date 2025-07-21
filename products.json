@@ -1,0 +1,524 @@
+{
+    "espressoBar": [
+  {
+    "name": "Espresso",
+    "price": "110 ₺",
+    "description": "Yoğun aromalı ve sert kahve, tek shot espresso.",
+    "image": "/images/espresso.jpg"
+  },
+  {
+    "name": "Americano",
+    "price": "130 ₺",
+    "description": "Espresso'nun sıcak su ile seyreltilmiş versiyonu, yumuşak içimli.",
+    "image": "/images/americano.jpg"
+  },
+  {
+    "name": "Latte",
+    "price": "130 ₺",
+    "description": "Espresso ve sıcak süt ile hazırlanan klasik sütlü kahve.",
+    "image": "/images/latte.jpg"
+  },
+  {
+    "name": "Almaud Latte (Kav. Badem Sütü)",
+    "price": "160 ₺",
+    "description": "Kavrulmuş badem sütü ile hazırlanan laktozsuz latte alternatifi.",
+    "image": "/images/almaud-latte.jpg"
+  },
+  {
+    "name": "Toffee Nut Latte",
+    "price": "160 ₺",
+    "description": "Karamelize fındık aromalı latte, tatlı ve yoğun lezzetli.",
+    "image": "/images/toffee-nut-latte.jpg"
+  },
+  {
+    "name": "Cookie Latte",
+    "price": "160 ₺",
+    "description": "Kurabiye aromalı sütlü latte, yumuşak içimli ve tatlı.",
+    "image": "/images/cookie-latte.jpg"
+  },
+  {
+    "name": "Mocha",
+    "price": "160 ₺",
+    "description": "Espresso, süt ve çikolata karışımı ile tatlı ve yoğun içim.",
+    "image": "/images/mocha.jpg"
+  },
+  {
+    "name": "Coca Mocha (Coconut+Çikolata)",
+    "price": "160 ₺",
+    "description": "Hindistan cevizi ve çikolata aromalı mocha, tropikal tatlı kahve.",
+    "image": "/images/coca-mocha.jpg"
+  },
+  {
+    "name": "Magnum Mocha (Badem+Çikolata)",
+    "price": "160 ₺",
+    "description": "Magnum bademli çikolata tadında yoğun ve zengin mocha.",
+    "image": "/images/magnum-mocha.jpg"
+  },
+  {
+    "name": "Zebra Mocha (B.Çikolata+Çikolata)",
+    "price": "160 ₺",
+    "description": "Beyaz ve klasik çikolatanın birleşimiyle hazırlanan özel mocha.",
+    "image": "/images/zebra-mocha.jpg"
+  },
+  {
+    "name": "White Chocolate Mocha",
+    "price": "160 ₺",
+    "description": "Beyaz çikolata ve espresso ile hazırlanan hafif ve tatlı kahve.",
+    "image": "/images/white-chocolate-mocha.jpg"
+  },
+  {
+    "name": "Salted Caramel",
+    "price": "160 ₺",
+    "description": "Tuzlu karamel aromalı espresso bazlı latte, tatlı ve dengeli bir içim sunar.",
+    "image": "/images/salted-caramel.jpg"
+  },
+  {
+    "name": "Cappucino",
+    "price": "130 ₺",
+    "description": "Espresso, sıcak süt ve bol süt köpüğü ile hazırlanan klasik kahve.",
+    "image": "/images/cappuccino.jpg"
+  },
+  {
+    "name": "Filtre Kahve (Demleme)",
+    "price": "130 ₺",
+    "description": "Demleme yöntemiyle hazırlanan sade ve yumuşak içimli kahve.",
+    "image": "/images/filtre-kahve.jpg"
+  },
+  {
+    "name": "Flate White",
+    "price": "160 ₺",
+    "description": "Espresso ve ince buharda süt ile yapılan dengeli kıvamlı kahve.",
+    "image": "/images/flat-white.jpg"
+  },
+  {
+    "name": "Cortado",
+    "price": "160 ₺",
+    "description": "Espresso ve eşit oranda süt ile hazırlanan, kısa ve yoğun içim.",
+    "image": "/images/cortado.jpg"
+  },
+  {
+    "name": "Granül Kahve",
+    "price": "130 ₺",
+    "description": "Hazır kahve granülleriyle yapılan pratik ve klasik kahve seçeneği.",
+    "image": "/images/granul-kahve.jpg"
+  },
+  {
+    "name": "Machiato (Karamel+Vanilya+Coconut)",
+    "price": "160 ₺",
+    "description": "Espresso üzerine karamel, vanilya ve hindistan cevizi aromalı özel karışım.",
+    "image": "/images/machiato.jpg"
+  }
+],
+
+     "iceBar": [
+    {
+        "id": 1,
+        "name": "Ice Americano",
+        "description": "Espresso'nun soğuk su ile seyreltilmiş hali, hafif ve sert içimli ferahlatıcı bir içecek.",
+        "price": "130 ₺",
+        "image": "/images/ice-americano.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Ice Latte",
+        "description": "Soğuk süt ile hazırlanmış espresso bazlı yumuşak içimli bir kahve.",
+        "price": "150 ₺",
+        "image": "/images/ice-latte.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Ice Toffee Nut Latte",
+        "description": "Toffee (karamelize fındık) aromalı soğuk latte, tatlı ve lezzetli bir içecek.",
+        "price": "160 ₺",
+        "image": "/images/ice-toffee-nut-latte.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Ice Cha Tea Latte",
+        "description": "Baharatlı çay ve soğuk süt ile hazırlanan egzotik aromalı içecek.",
+        "price": "160 ₺",
+        "image": "/images/ice-cha-tea-latte.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Ice Cookie Latte",
+        "description": "Kurabiye aromalı soğuk latte, tatlı sevenler için ideal bir içecek.",
+        "price": "160 ₺",
+        "image": "/images/ice-cookie-latte.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Almaud Latte (Kav. Badem Sütlü)",
+        "description": "Kavrulmuş badem sütü ile hazırlanan özel soğuk latte, laktozsuz ve aromatik.",
+        "price": "160 ₺",
+        "image": "/images/almaud-latte.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Ice Mocha",
+        "description": "Espresso, soğuk süt ve çikolata sosu ile hazırlanan tatlı bir kahve.",
+        "price": "160 ₺",
+        "image": "/images/ice-mocha.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Ice White Mocha",
+        "description": "Beyaz çikolata ve espresso karışımı ile hazırlanan hafif tatlı, soğuk kahve.",
+        "price": "160 ₺",
+        "image": "/images/ice-white-mocha.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Ice Magnum Mocha",
+        "description": "Magnum çikolata tadında zengin ve yoğun aromalı soğuk mocha.",
+        "price": "160 ₺",
+        "image": "/images/ice-magnum-mocha.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Ice Zebra Mocha",
+        "description": "Beyaz ve klasik çikolatanın harmanlandığı, çift tatlı mocha lezzeti.",
+        "price": "160 ₺",
+        "image": "/images/ice-zebra-mocha.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Ice Filtre",
+        "description": "Soğuk filtre kahve, sade ve doğal kahve tadı arayanlar için ideal.",
+        "price": "130 ₺",
+        "image": "/images/ice-filtre.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Ice Salted Caramel",
+        "description": "Tuzlu karamel aroması ile tatlı-tuzlu lezzet dengesine sahip soğuk kahve.",
+        "price": "160 ₺",
+        "image": "/images/ice-salted-caramel.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Ice Macchiato",
+        "description": "Soğuk süt üzerine espresso eklenerek yapılan sert ve dengeli bir içecek.",
+        "price": "150 ₺",
+        "image": "/images/ice-macchiato.jpg"
+    },
+    {
+        "id": 14,
+        "name": "Ice Cappuccino",
+        "description": "Espresso, süt ve süt köpüğü ile hazırlanan klasik kahvenin soğuk hali.",
+        "price": "150 ₺",
+        "image": "/images/ice-cappuccino.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Aromalı Frappe",
+        "description": "İsteğe göre aromalandırılmış, buzlu ve köpüklü kahve içeceği.",
+        "price": "160 ₺",
+        "image": "/images/aromali-frappe.jpg"
+    },
+    {
+        "id": 16,
+        "name": "Espresso Frappe",
+        "description": "Yoğun espresso ve buzla hazırlanan güçlü ve ferahlatıcı içecek.",
+        "price": "160 ₺",
+        "image": "/images/espresso-frappe.jpg"
+    }
+],
+
+    "pastalar": [
+    {
+        "id": 1,
+        "name": "Limonlu Cheesecake",
+        "description": "Ferahlatıcı limon aromasıyla hafif ve kremamsı cheesecake.",
+        "price": 190,
+        "image": "/images/espresso.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Frambuazlı Cheesecake",
+        "description": "Taze frambuaz sosuyla zenginleştirilmiş, kremamsı cheesecake.",
+        "price": 190,
+        "image": "/images/latte.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Tiremisu",
+        "description": "Klasik İtalyan tatlısı; kahve ve mascarpone peyniriyle hazırlanmış.",
+        "price": 190,
+        "image": "/images/cappuccino.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Browni",
+        "description": "Yoğun çikolatalı, yumuşak ve nemli browni kek.",
+        "price": 190,
+        "image": "/images/espresso.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Red Velvet",
+        "description": "Kırmızı kadife dokusuyla, krem peynirli harika bir pasta.",
+        "price": 190,
+        "image": "/images/latte.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Kalpli Mono",
+        "description": "Özel kalp şeklinde tasarlanmış, lezzetli tek kişilik pasta.",
+        "price": 220,
+        "image": "/images/cappuccino.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Mozaik Pasta",
+        "description": "Çikolata ve bisküvinin buluştuğu pratik ve lezzetli mozaik pasta.",
+        "price": 190,
+        "image": "/images/latte.jpg"
+    }
+],
+"waffle": [
+    {
+        "id": 1,
+        "name": "Klasik Waffle (Muz,Çilek-Bel.Çikolata)",
+        "description": "Taze muz ve çilekle, üzerine Belçika çikolatası sosuyla servis edilir.",
+        "price": 280,
+        "image": "/images/espresso.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Çilekli Waffle (Çilek, Muz-Belçika.Çik)",
+        "description": "Taze çilek ve muz dilimleriyle, üstü Belçika çikolatası kaplı waffle.",
+        "price": 280,
+        "image": "/images/latte.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Muzlu Waffle (Muz-Belkçika, Çik-Krem Şanti-Oreo)",
+        "description": "Muz, Belçika çikolatası, krem şanti ve Oreo parçalarıyla zenginleştirilmiş waffle.",
+        "price": 280,
+        "image": "/images/cappuccino.jpg"
+    }
+],
+     "specialTatlilar": [
+    {
+        "id": 1,
+        "name": "Pemba Aşk",
+        "description": "Taze çilek ve Belçika çikolatası ile hazırlanan özel tatlı.",
+        "price": "250 ₺",
+        "image": "/images/pemba-ask.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Diyet Bozan",
+        "description": "Çilek, muz ve Belçika çikolatası ile yapılan lezzetli ve doyurucu tatlı.",
+        "price": "250 ₺",
+        "image": "/images/diyet-bozan.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Saksı",
+        "description": "Muz, Belçika çikolatası, krem şanti ve Oreo parçalarıyla sunulan eğlenceli tatlı.",
+        "price": "250 ₺",
+        "image": "/images/saksi.jpg"
+    }
+],
+
+     "specialIcecekler": [
+    {
+        "id": 1,
+        "name": "Frozen",
+        "description": "Buzlu meyve aromalı ferahlatıcı içecek.",
+        "price": "160 ₺",
+        "image": "/images/frozen.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Milkshake",
+        "description": "Soğuk süt, dondurma ve aromalarla hazırlanan tatlı içecek.",
+        "price": "160 ₺",
+        "image": "/images/milkshake.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Mojito",
+        "description": "Nane ve limonla hazırlanan serinletici alkolsüz kokteyl.",
+        "price": "160 ₺",
+        "image": "/images/mojito.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Smoothie",
+        "description": "Taze meyvelerle hazırlanan yoğun ve besleyici içecek.",
+        "price": "170 ₺",
+        "image": "/images/smoothie.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Berry Hibiscus",
+        "description": "Hibiskus ve kırmızı meyvelerden oluşan buzlu içecek.",
+        "price": "170 ₺",
+        "image": "/images/berry-hibiscus.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Cool Lime",
+        "description": "Naneli ve misket limonlu soğuk içecek.",
+        "price": "160 ₺",
+        "image": "/images/cool-lime.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Limonata",
+        "description": "Ev yapımı taze limonata.",
+        "price": "130 ₺",
+        "image": "/images/limonata.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Macha",
+        "description": "Matcha çayı tozu ile hazırlanan özel yeşil içecek.",
+        "price": "160 ₺",
+        "image": "/images/macha.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Dragon (Dragon + Mango)",
+        "description": "Ejder meyvesi ve mango karışımı tropikal içecek.",
+        "price": "160 ₺",
+        "image": "/images/dragon.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Mia Special (Ananas + Kivi)",
+        "description": "Ananas ve kivi aromalı özel karışım.",
+        "price": "160 ₺",
+        "image": "/images/mia-special.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Summer Glamour (Ananas + Orman Meyve)",
+        "description": "Tropikal ananas ve orman meyveleri karışımı ferah içecek.",
+        "price": "160 ₺",
+        "image": "/images/summer-glamour.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Mia Fresh (Dragon Mey + Ananas)",
+        "description": "Ejder meyvesi ve ananas birleşimi taze içecek.",
+        "price": "160 ₺",
+        "image": "/images/mia-fresh.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Churchill",
+        "description": "Tuz, limon, soda ve buz ile yapılan ferahlatıcı içecek.",
+        "price": "100 ₺",
+        "image": "/images/churchill.jpg"
+    }
+],
+
+     "sicakIcecekler": [
+    {
+        "id": 1,
+        "name": "Çay",
+        "description": "Klasik siyah çay.",
+        "price": "50 ₺",
+        "image": "/images/cay.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Kupa Çay",
+        "description": "Büyük fincanda servis edilen siyah çay.",
+        "price": "70 ₺",
+        "image": "/images/kupa-cay.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Bitki Çayları",
+        "description": "Papatya, ıhlamur gibi çeşitli bitki çayları.",
+        "price": "130 ₺",
+        "image": "/images/bitki-cayi.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Chai Tea Latte",
+        "description": "Baharatlı çay karışımı ve sıcak süt ile hazırlanan içecek.",
+        "price": "130 ₺",
+        "image": "/images/chai-tea-latte.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Salep",
+        "description": "Kış aylarının vazgeçilmezi geleneksel sıcak içecek.",
+        "price": "130 ₺",
+        "image": "/images/salep.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Dondurmalı Salep",
+        "description": "Sıcak salep ve vanilyalı dondurmanın birleşimi.",
+        "price": "130 ₺",
+        "image": "/images/dondurmali-salep.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Sıcak Çikolata",
+        "description": "Yoğun ve kremalı sıcak çikolata içeceği.",
+        "price": "130 ₺",
+        "image": "/images/sicak-cikolata.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Callebaut Sıcak Çikolata",
+        "description": "Kaliteli Belçika çikolatası ile hazırlanan özel sıcak çikolata.",
+        "price": "150 ₺",
+        "image": "/images/callebaut-sicak-cikolata.jpg"
+    }
+],
+
+    "turkKahveleri": [
+    {
+        "id": 1,
+        "name": "Türk Kahvesi",
+        "description": "Klasik usulde pişirilen geleneksel Türk kahvesi.",
+        "price": "110 ₺",
+        "image": "/images/turk-kahvesi.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Double Türk Kahvesi",
+        "description": "Daha yoğun kahve tadı için çift ölçü Türk kahvesi.",
+        "price": "130 ₺",
+        "image": "/images/double-turk-kahvesi.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Sütlü Türk Kahvesi",
+        "description": "Süt ile yumuşatılmış özel Türk kahvesi.",
+        "price": "130 ₺",
+        "image": "/images/sutlu-turk-kahvesi.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Tarz-ı Türk Kahvesi",
+        "description": "Kahve sunumunda özel teknikle hazırlanan Türk kahvesi.",
+        "price": "130 ₺",
+        "image": "/images/tarz-i-turk-kahvesi.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Menengiç Kahvesi",
+        "description": "Menengiç bitkisinden yapılan, kafeinsiz kahve alternatifi.",
+        "price": "140 ₺",
+        "image": "/images/menengic-kahvesi.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Gar Kahvesi",
+        "description": "Yoğun kıvamlı, aroması yüksek geleneksel Türk kahvesi.",
+        "price": "110 ₺",
+        "image": "/images/gar-kahvesi.jpg"
+    }
+]
+
+}

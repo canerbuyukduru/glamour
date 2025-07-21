@@ -10,11 +10,11 @@ const Navbar = () => {
       <nav className="container mx-auto flex justify-between items-center p-2">
         <Link href="/">
           <Image
-            src="/images/glamour.jpg"
-            width={100}
-            height={100}
+            src="/images/glamour-new.jpg"
+            width={240}
+            height={120}
             alt="Kaktus-Logo"
-            className="w-20 md:w-36 h-36 object-cover"
+            className="object-cover"
             priority
           />
         </Link>
