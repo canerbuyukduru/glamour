@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import ProductsData from "../../products.json";
 import "./menu-animations.css";
+import Link from "next/link";
 
 const sectionTitles = [
   "Espresso Bar",
@@ -26,8 +27,8 @@ const Menu = () => {
   const sectionKeyMap = {
     "Espresso Bar": "espressoBar",
     "Ice Bar": "iceBar",
-    "Pastalar": "pastalar",
-    "Waffle": "waffle",
+    Pastalar: "pastalar",
+    Waffle: "waffle",
     "Special Tatlılar": "specialTatlilar",
     "Special İçecekler": "specialIcecekler",
     "Sıcak İçecekler": "sicakIcecekler",
@@ -36,71 +37,81 @@ const Menu = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
-
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => {
-      setShowScrollTop(window.pageYOffset > 300);
-    };
+    const onScroll = () => setShowScrollTop(window.pageYOffset > 300);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-  // Anasayfaya yönlendirme
-  const goBackHome = () => {
-    router.push("/");
-  };
+  const goBackHome = () => router.push("/");
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#e0d9cc] relative">
-      {/* Sol üst geri butonu - Anasayfaya yönlendirme */}
+   <div
+  className="min-h-screen flex flex-col relative"
+  style={{
+    backgroundImage: "url('/images/marble-bg.png')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+      {/* Ana Sayfa Butonu */}
       <button
         onClick={goBackHome}
         aria-label="Ana sayfaya dön"
-        className="
-        cursor-pointer
-          fixed top-5 left-5 z-[150] flex items-center justify-center
-          w-12 h-12 rounded-full bg-[#d4af7f] text-white shadow-lg
-          hover:bg-[#b38834] transition-colors duration-300
-          focus:outline-none focus:ring-2 focus:ring-[#b38834] focus:ring-offset-2
-        "
+        className="fixed top-5 left-5 z-[150] w-12 h-12 bg-[#8B0000] text-white rounded-full shadow-lg hover:bg-[#a61919] transition duration-300 flex items-center justify-center"
         title="Ana sayfaya dön"
       >
-        {/* Sol ok icon */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 stroke-current"
+          className="w-6 h-6"
           fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={3}
           stroke="currentColor"
+          strokeWidth={3}
+          viewBox="0 0 24 24"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M15 19l-7-7 7-7"
+          />
         </svg>
       </button>
 
-      {/* Header */}
-      <header className="w-full bg-[#e0d9cc] z-10 relative">
-        <div className="max-w-7xl mx-auto flex items-center justify-center py-6 px-4">
-          <Image
-            src="/images/glamour-new.jpg"
-            alt="Glamour Logo"
-            width={280}
-            height={70}
-            className="object-cover shadow-lg animate-fade-in rounded-lg"
-            priority
-          />
-        </div>
-      </header>
+      {/* Başlık */}
+      <svg
+      className="w-full flex justify-center items-center"
+            version="1.0"
+            xmlns="http://www.w3.org/2000/svg"
+            width="200.000000pt"
+            height="100.000000pt"
+            viewBox="0 0 240.000000 120.000000"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            {" "}
+            <g
+              transform="translate(0.000000,120.000000) scale(0.100000,-0.100000)"
+              fill="#7B0C0C"
+              stroke="none"
+            >
+              {" "}
+              <path d="M90 768 c-100 -68 -105 -231 -11 -311 38 -32 94 -36 143 -11 30 15 32 15 45 -2 11 -15 13 -8 13 53 0 66 1 71 20 66 11 -3 20 -1 20 4 0 6 -31 10 -70 10 -39 0 -70 -4 -70 -10 0 -5 9 -7 20 -4 18 5 20 0 20 -47 0 -29 -5 -57 -12 -64 -19 -19 -83 -14 -109 7 -22 17 -24 29 -28 111 -1 50 0 107 4 127 9 48 45 83 87 83 41 -1 62 -16 81 -60 l15 -35 1 50 1 50 -68 3 c-57 2 -73 -1 -102 -20z" />{" "}
+              <path d="M330 778 c0 -5 11 -8 25 -8 l25 0 0 -160 0 -160 -25 0 c-14 0 -25 -3 -25 -7 0 -9 350 -7 358 2 3 3 -6 5 -20 5 l-26 0 18 48 18 47 59 3 59 3 16 -51 16 -50 -26 0 c-14 0 -23 -3 -20 -6 9 -8 258 -10 258 -1 0 4 -10 7 -22 7 -23 0 -23 1 -23 149 0 82 1 148 3 147 1 -2 26 -69 56 -150 53 -143 62 -164 70 -155 9 11 97 291 93 296 -3 3 -21 -43 -39 -101 -18 -58 -35 -106 -38 -106 -3 0 -25 56 -50 124 l-45 124 -53 4 c-28 2 -52 0 -52 -4 0 -5 10 -8 23 -8 l22 0 -3 -161 -3 -160 -47 3 -47 3 -57 155 c-32 85 -58 161 -58 168 0 6 -3 12 -7 12 -7 0 -28 -52 -108 -275 -17 -45 -27 -61 -43 -63 -20 -3 -22 1 -23 50 -1 50 -2 51 -9 18 -12 -49 -42 -70 -101 -70 l-49 0 0 160 0 160 27 0 c14 0 24 3 21 6 -9 8 -148 10 -148 2z m428 -125 c11 -32 23 -66 27 -75 6 -16 1 -18 -47 -18 l-55 0 26 75 c14 41 27 75 28 75 0 0 10 -26 21 -57z" />{" "}
+              <path d="M1271 781 l-44 -6 2 -162 2 -163 -27 0 c-15 0 -25 -3 -21 -6 8 -9 147 -10 147 -1 0 4 -11 7 -25 7 l-25 0 0 160 0 160 25 0 c14 0 25 5 25 10 0 6 -3 9 -7 8 -5 0 -28 -4 -52 -7z" />{" "}
+              <path d="M1445 759 c-92 -81 -96 -200 -10 -286 39 -39 47 -43 93 -43 44 0 57 5 88 32 46 40 64 82 64 148 0 66 -18 108 -64 148 -31 27 -45 32 -86 32 -41 0 -55 -5 -85 -31z m134 11 c31 -16 46 -70 46 -160 0 -90 -15 -144 -46 -160 -28 -16 -85 -12 -108 8 -56 44 -53 268 2 307 24 17 80 20 106 5z" />{" "}
+              <path d="M1720 778 c0 -5 11 -8 25 -8 l25 0 0 -136 c0 -74 5 -144 10 -155 16 -28 63 -49 114 -49 36 0 52 6 78 29 l33 29 3 141 c3 131 5 141 23 141 10 0 19 4 19 8 0 9 -88 7 -97 -2 -4 -3 5 -6 18 -6 l24 0 -3 -137 c-4 -157 -11 -178 -68 -189 -45 -8 -81 8 -94 42 -6 14 -10 84 -10 155 l0 129 27 0 c14 0 24 3 21 6 -9 8 -148 10 -148 2z" />{" "}
+              <path d="M2073 778 c-2 -5 7 -8 21 -8 l26 0 0 -160 0 -160 -27 0 c-14 0 -24 -3 -21 -6 9 -8 158 -10 158 -1 0 4 -13 7 -30 7 l-30 0 0 80 0 80 41 0 c63 0 76 -11 84 -77 4 -32 12 -64 18 -72 16 -19 54 -31 74 -24 15 6 14 8 -7 13 -22 5 -26 12 -30 64 -6 59 -31 96 -67 96 -8 0 0 14 21 34 20 18 36 38 36 44 0 25 -21 62 -42 74 -25 14 -217 28 -225 16z m189 -25 c23 -21 25 -95 2 -117 -9 -9 -32 -16 -55 -16 l-39 0 0 75 0 75 37 0 c20 0 45 -7 55 -17z" />{" "}
+            </g>{" "}
+          </svg>
 
-      {/* Main Content */}
+      {/* İçerik */}
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-8">
-        {/* Section Buttons */}
+        {/* Kategori Butonları */}
+        
         <div className="flex flex-wrap gap-3 mb-8">
           {sectionTitles.map((title, idx) => (
             <button
@@ -111,12 +122,10 @@ const Menu = () => {
                   el.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
               className="
-                cursor-pointer
-                border-2 border-[#D4AF7F] text-[#8b6f35]
-                px-7 py-2 rounded-lg font-semibold shadow-sm
-                bg-white hover:bg-[#f3e6d2] hover:text-[#5a4725]
-                transition-colors duration-300
-                focus:outline-none focus:ring-2 focus:ring-[#D4AF7F] focus:ring-offset-1
+                cursor-pointer px-6 py-2 rounded-lg font-semibold shadow-sm
+                border-2 border-[#8B0000] text-[#8B0000] bg-white
+                hover:bg-[#f5e7e7] hover:text-[#6a0000]
+                transition duration-300
               "
             >
               {title}
@@ -124,52 +133,50 @@ const Menu = () => {
           ))}
         </div>
 
-        {/* Sections */}
+        {/* Ürün Kartları */}
         {sectionTitles.map((title, idx) => {
           const sectionKey = sectionKeyMap[title];
           const cards = ProductsData[sectionKey] || [];
 
           return (
             <section key={title} id={sectionIds[idx]} className="mb-10">
-              <div className="border-2 border-[#D4AF7F] rounded-xl p-5 mb-6 bg-[#faf9f7] shadow-md">
-                <h2 className="text-2xl font-extrabold text-[#8b6f35] mb-3 tracking-wide flex items-center gap-2">
+              <div className="border border-[#8B0000] rounded-xl p-5 mb-6 bg-[#fcfaf9] shadow-sm">
+                <h2 className="text-2xl font-bold text-[#8B0000] mb-3">
                   {title}
                 </h2>
-                <div className="text-right text-sm text-[#8b6f35] italic mb-3 select-none">
+                <div className="text-right text-sm italic text-[#8B0000]/70 mb-3">
                   *20-25 dk. hazırlanma süresi vardır.
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                   {cards.length === 0 ? (
-                    <div className="text-gray-500 italic col-span-full">
+                    <div className="text-gray-400 italic col-span-full">
                       Ürün bulunamadı.
                     </div>
                   ) : (
                     cards.map((card, i) => (
                       <button
                         key={i}
-                        className="
-                          flex items-center w-full gap-4 p-5
-                          bg-[#faf9f7]
-                          rounded-lg shadow-xl
-                          text-left cursor-pointer
-                          hover:bg-[#e5c27a]
-                          transition-all duration-300
-                          transform hover:-translate-y-1 hover:scale-[1.02]
-                        "
                         onClick={() => {
                           setSelectedCard(card);
                           setModalOpen(true);
                         }}
+                        className="
+                        cursor-pointer
+                          flex items-center gap-4 p-5 rounded-lg shadow-md text-left
+                          bg-[#F8F6F4] hover:bg-[#fdeeee]
+                          transform transition-all duration-300
+                          hover:-translate-y-1 hover:scale-[1.02]
+                        "
                       >
                         <div className="flex-1">
-                          <div className="font-bold text-lg mb-1 text-[#3c3a36]">
+                          <div className="font-semibold text-lg text-[#3d0000] mb-1">
                             {card.name}
                           </div>
-                          <div className="text-sm mb-2 text-[#4a4a4a] line-clamp-2">
+                          <div className="text-sm text-[#5a2d2d] mb-2 line-clamp-2">
                             {card.description}
                           </div>
-                          <div className="text-[#b97a2a] font-bold mb-2">
+                          <div className="text-[#8B0000] font-bold">
                             {card.price}
                           </div>
                         </div>
@@ -178,8 +185,8 @@ const Menu = () => {
                             src={card.image}
                             alt={card.name}
                             width={90}
-                            height={90}
-                            className="rounded-lg object-cover w-[90px] h-[90px]"
+                            height={120}
+                            className="rounded-md object-cover w-[100px] h-auto"
                           />
                         </div>
                       </button>
@@ -194,74 +201,62 @@ const Menu = () => {
         {/* Modal */}
         {modalOpen && selectedCard && (
           <div
-            className="fixed inset-0 z-[100] flex items-center justify-center
-                       bg-black/50 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/40 backdrop-blur-sm"
             onClick={(e) => {
               if (e.target === e.currentTarget) setModalOpen(false);
             }}
           >
-            <div
-              className="
-                bg-[#faf9f7] rounded-xl shadow-2xl max-w-4xl w-full
-                flex flex-col md:flex-row overflow-hidden relative p-6
-              "
-            >
-              {/* Close button */}
+            <div className="bg-white rounded-xl shadow-2xl max-w-4xl w-full flex flex-col md:flex-row p-6 relative">
+              {/* Kapat Butonu */}
               <button
                 onClick={() => setModalOpen(false)}
-                className="
-                  absolute top-5 left-5 bg-white rounded-full p-2 shadow
-                  hover:bg-[#f3e6d2] transition
-                "
-                aria-label="Close modal"
+                className="absolute top-5 left-5 bg-white p-2 rounded-full shadow hover:bg-[#f5e7e7]"
+                aria-label="Kapat"
               >
                 <svg
                   width="28"
                   height="28"
-                  fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
+                  fill="none"
                   viewBox="0 0 24 24"
                 >
                   <path d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
 
-              {/* Image */}
-              <div className="w-full md:w-1/2 flex items-center justify-center bg-white rounded-lg overflow-hidden max-h-96">
+              {/* Görsel */}
+              <div className="w-full md:w-1/2 flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden max-h-96">
                 <Image
                   src={selectedCard.image}
                   alt={selectedCard.name}
-                  width={400}
+                  width={300}
                   height={400}
-                  className="object-cover"
+                  className="object-contain w-full h-full"
                 />
               </div>
 
-              {/* Info */}
+              {/* Bilgiler */}
               <div className="flex-1 p-6 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-3xl font-extrabold text-[#222f3e] mb-3">
+                  <h3 className="text-3xl font-bold text-[#8B0000] mb-3">
                     {selectedCard.name}
                   </h3>
-                  <p className="text-[#2c2c2c] text-lg mb-5">
+                  <p className="text-[#3c3c3c] text-lg mb-5">
                     {selectedCard.description}
                   </p>
-                  <p className="text-[#b97a2a] font-bold text-2xl">
+                  <p className="text-[#a01919] font-bold text-2xl">
                     {selectedCard.price}
                   </p>
                 </div>
-
-                <div className="flex items-center gap-2 mt-6 text-[#6a5829] text-sm font-semibold select-none">
+                <div className="flex items-center gap-2 mt-6 text-[#8B0000] text-sm font-semibold select-none">
                   <svg
                     width="22"
                     height="22"
-                    fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
+                    fill="none"
                     viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className="stroke-current"
                   >
                     <circle cx="12" cy="12" r="10" />
                     <path d="M8 12h8" />
@@ -275,31 +270,25 @@ const Menu = () => {
         )}
       </main>
 
-      {/* Scroll to Top Button */}
+      {/* Scroll to Top */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}
-          aria-label="Sayfa üstüne dön"
-          className="
-          cursor-pointer
-            fixed bottom-8 right-8 z-[150] w-12 h-12 rounded-full
-            bg-[#d4af7f] text-white shadow-lg
-            flex items-center justify-center
-            hover:bg-[#b38834] transition-colors duration-300
-            focus:outline-none focus:ring-2 focus:ring-[#b38834] focus:ring-offset-2
-          "
-          title="Sayfa üstüne dön"
+          className="fixed bottom-8 right-8 z-[150] w-12 h-12 bg-[#8B0000] text-white rounded-full shadow-lg flex items-center justify-center hover:bg-[#a61919] transition duration-300"
         >
-          {/* Yukarı ok icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 stroke-current"
+            className="w-6 h-6"
             fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={3}
             stroke="currentColor"
+            strokeWidth={3}
+            viewBox="0 0 24 24"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 15l7-7 7 7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 15l7-7 7 7"
+            />
           </svg>
         </button>
       )}

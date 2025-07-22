@@ -13,7 +13,7 @@ const HeroSection = () => {
         muted
         playsInline
       /> */}
-      <div className="bg-black/40 absolute top-0 left-0 w-full h-full z-0"></div>
+      <div className="bg-black/90 absolute top-0 left-0 w-full h-full z-0"></div>
 
       {/* Daire şeklinde dönen animasyonlu yazı */}
       <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -35,7 +35,7 @@ const HeroSection = () => {
               letterSpacing="3"
             >
               <textPath xlinkHref="#circlePath">
-                GLAMOUR • GLAMOUR • GLAMOUR • GLAMOUR •
+                GLAMOUR • GLAMOUR • GLAMOUR • GLAMOUR • GLAMOUR •
               </textPath>
             </text>
           </svg>
